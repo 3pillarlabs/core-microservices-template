@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  microservicetemplate:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "18601:8601"

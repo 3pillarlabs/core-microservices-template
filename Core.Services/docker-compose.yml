@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  microservicetemplate:
+    image: core.services
+    build:
+      context: ./Core.Services
+      dockerfile: Dockerfile
