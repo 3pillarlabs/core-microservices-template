@@ -1,0 +1,35 @@
+{
+  "name": "CoreService_Report",
+  "version": "0.3.8",
+  "description": "Generates Cucumber HTML reports in three different themes",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run features && npm run clean",
+    "clean": "rm -rf tests/report/*.html tests/report/*.json tests/report/screenshot",
+    "features": "node node_modules/cucumber/bin/cucumber tests/features/invoices.feature -f json:tests/report/cucumber_report.json",
+    "debug": "node --debug-brk=5858 ./node_modules/.bin/cucumber-js tests/features"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gkushang/cucumber-html-reporter.git"
+  },
+  "keywords": [
+    "cucumber",
+    "html",
+    "cucumber-html-reporter",
+    "html report",
+    "json to html"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/gkushang/cucumber-html-reporter#readme",
+  "dependencies": {
+    "JSONPath": "^0.11.2",
+    "cucumber": "^2.3.1",
+    "dataobject-parser": "^1.1.3",
+    "request": "^2.81.0",
+    "stackframe": "^1.0.4"
+  },
+  "devDependencies": {
+    "cucumber-html-reporter": "^0.3.2"
+  }
+}

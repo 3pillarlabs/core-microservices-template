@@ -6,7 +6,7 @@ namespace Core.Services.Areas.V1.Controlllers
 {  
     public partial class ServiceController : Controller
     {
-        [Route("{Id:int}")]
+        [Route("{id:int}")]
         [HttpGet]
         public IActionResult GetEmployeeById(int id)
         {

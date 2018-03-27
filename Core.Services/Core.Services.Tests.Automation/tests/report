@@ -1,0 +1,485 @@
+[
+  {
+    "keyword": "Feature",
+    "line": 1,
+    "name": "Invoice's automation tests",
+    "tags": [],
+    "uri": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\service.feature",
+    "elements": [
+      {
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "Get the version",
+        "tags": [],
+        "id": "invoice's-automation-tests;get-the-version",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Before",
+            "result": {
+              "status": "passed",
+              "duration": 1
+            },
+            "hidden": true,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\hooks.js:24"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Before",
+            "result": {
+              "status": "passed",
+              "duration": 1
+            },
+            "hidden": true,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:17"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I GET the version",
+            "result": {
+              "status": "failed",
+              "duration": 1021,
+              "error_message": "Error: Error on GET request to http://localhost:52973/serviceversion/: connect ECONNREFUSED 127.0.0.1:52973\n    at Function.<anonymous> (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\cucumber\\lib\\user_code_runner.js:105:21)\n    at throw (native)\n    at tryCatcher (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\util.js:16:23)\n    at PromiseSpawn._promiseRejected (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\generators.js:107:10)\n    at Promise._settlePromise (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\promise.js:576:26)\n    at Promise._settlePromise0 (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\promise.js:614:10)\n    at Promise._settlePromises (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\promise.js:689:18)\n    at Async._drainQueue (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\async.js:133:16)\n    at Async._drainQueues (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\async.js:143:10)\n    at Immediate.Async.drainQueues (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\async.js:17:14)\n    at runCallback (timers.js:672:20)\n    at tryOnImmediate (timers.js:645:5)\n    at processImmediate [as _immediateCallback] (timers.js:617:5)"
+            },
+            "line": 4,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:91"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "the http status should be 200",
+            "result": {
+              "status": "skipped"
+            },
+            "line": 5,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:115"
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "Get the employees detail",
+        "tags": [],
+        "id": "invoice's-automation-tests;get-the-employees-detail",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Before",
+            "result": {
+              "status": "passed",
+              "duration": 0
+            },
+            "hidden": true,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\hooks.js:24"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Before",
+            "result": {
+              "status": "passed",
+              "duration": 0
+            },
+            "hidden": true,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:17"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "I have an authorized key",
+            "result": {
+              "status": "passed",
+              "duration": 1
+            },
+            "line": 8,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:80"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "path parameter id = \"102\"",
+            "result": {
+              "status": "passed",
+              "duration": 1
+            },
+            "line": 9,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:26"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I send a \"GET\" request on \"v1/{id}\"",
+            "result": {
+              "status": "failed",
+              "duration": 1008,
+              "error_message": "Error: Error on GET request to http://localhost:52973/servicev1/102: connect ECONNREFUSED 127.0.0.1:52973\n    at Function.<anonymous> (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\cucumber\\lib\\user_code_runner.js:105:21)\n    at throw (native)\n    at tryCatcher (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\util.js:16:23)\n    at PromiseSpawn._promiseRejected (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\generators.js:107:10)\n    at Promise._settlePromise (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\promise.js:576:26)\n    at Promise._settlePromise0 (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\promise.js:614:10)\n    at Promise._settlePromises (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\promise.js:689:18)\n    at Async._drainQueue (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\async.js:133:16)\n    at Async._drainQueues (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\async.js:143:10)\n    at Immediate.Async.drainQueues (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\async.js:17:14)\n    at runCallback (timers.js:672:20)\n    at tryOnImmediate (timers.js:645:5)\n    at processImmediate [as _immediateCallback] (timers.js:617:5)"
+            },
+            "line": 10,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:34"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "the http status should be 200",
+            "result": {
+              "status": "skipped"
+            },
+            "line": 11,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:115"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "the result should not equal to null",
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:143"
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "line": 14,
+        "name": "Get the employees list",
+        "tags": [],
+        "id": "invoice's-automation-tests;get-the-employees-list",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Before",
+            "result": {
+              "status": "passed",
+              "duration": 0
+            },
+            "hidden": true,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\hooks.js:24"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Before",
+            "result": {
+              "status": "passed",
+              "duration": 1
+            },
+            "hidden": true,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:17"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "I have an authorized key",
+            "result": {
+              "status": "passed",
+              "duration": 1
+            },
+            "line": 15,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:80"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I send a \"GET\" request on \"v1/\"",
+            "result": {
+              "status": "failed",
+              "duration": 1006,
+              "error_message": "Error: Error on GET request to http://localhost:52973/servicev1/: connect ECONNREFUSED 127.0.0.1:52973\n    at Function.<anonymous> (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\cucumber\\lib\\user_code_runner.js:105:21)\n    at throw (native)\n    at tryCatcher (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\util.js:16:23)\n    at PromiseSpawn._promiseRejected (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\generators.js:107:10)\n    at Promise._settlePromise (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\promise.js:576:26)\n    at Promise._settlePromise0 (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\promise.js:614:10)\n    at Promise._settlePromises (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\promise.js:689:18)\n    at Async._drainQueue (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\async.js:133:16)\n    at Async._drainQueues (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\async.js:143:10)\n    at Immediate.Async.drainQueues (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\async.js:17:14)\n    at runCallback (timers.js:672:20)\n    at tryOnImmediate (timers.js:645:5)\n    at processImmediate [as _immediateCallback] (timers.js:617:5)"
+            },
+            "line": 16,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:34"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "the http status should be 200",
+            "result": {
+              "status": "skipped"
+            },
+            "line": 17,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:115"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "the result should equal to null",
+            "result": {
+              "status": "skipped"
+            },
+            "line": 18,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:128"
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "line": 20,
+        "name": "Submit Add new employee",
+        "tags": [],
+        "id": "invoice's-automation-tests;submit-add-new-employee",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Before",
+            "result": {
+              "status": "passed",
+              "duration": 1
+            },
+            "hidden": true,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\hooks.js:24"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Before",
+            "result": {
+              "status": "passed",
+              "duration": 0
+            },
+            "hidden": true,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:17"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "I have an authorized key",
+            "result": {
+              "status": "passed",
+              "duration": 0
+            },
+            "line": 21,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:80"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "path parameter Name = \"AutomationUser\"",
+            "result": {
+              "status": "passed",
+              "duration": 0
+            },
+            "line": 22,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:26"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "body parameter Address = \"Delhi\"",
+            "result": {
+              "status": "passed",
+              "duration": 0
+            },
+            "line": 23,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:26"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "body parameter DepartmentId = \"1002\"",
+            "result": {
+              "status": "passed",
+              "duration": 0
+            },
+            "line": 24,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:26"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "body parameter Salary = \"3500\"",
+            "result": {
+              "status": "passed",
+              "duration": 0
+            },
+            "line": 25,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:26"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I send a \"POST\" request on \"v1/\"",
+            "result": {
+              "status": "failed",
+              "duration": 1007,
+              "error_message": "Error: Error on POST request to http://localhost:52973/servicev1/: connect ECONNREFUSED 127.0.0.1:52973\n    at Function.<anonymous> (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\cucumber\\lib\\user_code_runner.js:105:21)\n    at throw (native)\n    at tryCatcher (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\util.js:16:23)\n    at PromiseSpawn._promiseRejected (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\generators.js:107:10)\n    at Promise._settlePromise (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\promise.js:576:26)\n    at Promise._settlePromise0 (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\promise.js:614:10)\n    at Promise._settlePromises (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\promise.js:689:18)\n    at Async._drainQueue (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\async.js:133:16)\n    at Async._drainQueues (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\async.js:143:10)\n    at Immediate.Async.drainQueues (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\async.js:17:14)\n    at runCallback (timers.js:672:20)\n    at tryOnImmediate (timers.js:645:5)\n    at processImmediate [as _immediateCallback] (timers.js:617:5)"
+            },
+            "line": 26,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:34"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "the http status should be 200",
+            "result": {
+              "status": "skipped"
+            },
+            "line": 27,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:115"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "the success should equal \"true\"",
+            "result": {
+              "status": "skipped"
+            },
+            "line": 28,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:136"
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Scenario",
+        "line": 30,
+        "name": "Submit delete new employee",
+        "tags": [],
+        "id": "invoice's-automation-tests;submit-delete-new-employee",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Before",
+            "result": {
+              "status": "passed",
+              "duration": 0
+            },
+            "hidden": true,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\hooks.js:24"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Before",
+            "result": {
+              "status": "passed",
+              "duration": 1
+            },
+            "hidden": true,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:17"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "name": "I have an authorized key",
+            "result": {
+              "status": "passed",
+              "duration": 1
+            },
+            "line": 31,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:80"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "path parameter id = \"101\"",
+            "result": {
+              "status": "passed",
+              "duration": 1
+            },
+            "line": 32,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:26"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "name": "I send a \"DELETE\" request on \"v1/{id}\"",
+            "result": {
+              "status": "failed",
+              "duration": 1009,
+              "error_message": "Error: Error on DELETE request to http://localhost:52973/servicev1/101: connect ECONNREFUSED 127.0.0.1:52973\n    at Function.<anonymous> (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\cucumber\\lib\\user_code_runner.js:105:21)\n    at throw (native)\n    at tryCatcher (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\util.js:16:23)\n    at PromiseSpawn._promiseRejected (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\generators.js:107:10)\n    at Promise._settlePromise (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\promise.js:576:26)\n    at Promise._settlePromise0 (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\promise.js:614:10)\n    at Promise._settlePromises (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\promise.js:689:18)\n    at Async._drainQueue (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\async.js:133:16)\n    at Async._drainQueues (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\async.js:143:10)\n    at Immediate.Async.drainQueues (D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\node_modules\\bluebird\\js\\release\\async.js:17:14)\n    at runCallback (timers.js:672:20)\n    at tryOnImmediate (timers.js:645:5)\n    at processImmediate [as _immediateCallback] (timers.js:617:5)"
+            },
+            "line": 33,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:34"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "name": "the http status should be 200",
+            "result": {
+              "status": "skipped"
+            },
+            "line": 34,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:115"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "name": "the success should equal \"true\"",
+            "result": {
+              "status": "skipped"
+            },
+            "line": 35,
+            "match": {
+              "location": "D:\\Rakhi\\TPG\\CoreServiceTemplate\\Core.Services\\Core.Services.Tests.Automation\\tests\\features\\step_definitions\\stepDefinition.js:136"
+            }
+          }
+        ]
+      }
+    ],
+    "id": "invoice's-automation-tests"
+  }
+]

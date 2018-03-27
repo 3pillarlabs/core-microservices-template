@@ -3,3 +3,6 @@ Core.Services/Core.Services/bin/
 Core.Services/Core.Services/newrelic/
 Core.Services/Core.Services/obj/
 Core.Services/obj/
+Core.Services/Core.Services.Tests.Automation/.vscode/
+Core.Services/Core.Services.Tests.Automation/node_modules/
+Core.Services/Core.Services.Tests.Automation/obj/
