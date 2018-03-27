@@ -6,3 +6,10 @@ Core.Services/obj/
 Core.Services/Core.Services.Tests.Automation/.vscode/
 Core.Services/Core.Services.Tests.Automation/node_modules/
 Core.Services/Core.Services.Tests.Automation/obj/
+src/Core.Services/obj/
+src/obj/
+src/Core.Services/newrelic/
+src/Core.Services/bin/
+src/Core.Services.Tests.Automation/node_modules/
+src/Core.Services.Tests.Automation/obj/
+src/.vs/Core.Services/v15/
