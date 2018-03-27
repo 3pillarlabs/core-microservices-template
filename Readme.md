@@ -5,8 +5,9 @@ This .NetCore Microservice Application contains:
 	• Docker
 	• Logging: 
 		• Docker logging(Kitematic)
+	• Monitoring App:
 		• NewRelic
 	• Tests:
-		• Automation Tests
+		• Cucumber Automation Tests
 		• Unit Tests with Mock
-	• Swagger
+
