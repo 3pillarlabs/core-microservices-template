@@ -9,6 +9,8 @@ Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-co
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "Core.Services.Tests.Automation", "Core.Services.Tests.Automation\Core.Services.Tests.Automation.njsproj", "{F37735B1-251A-4CE6-A238-68CE76A1A149}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Services.Tests.Unit", "Core.Services.Tests.Unit\Core.Services.Tests.Unit.csproj", "{6AC225C7-9743-4B04-80D4-58BE9150ACD0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{F37735B1-251A-4CE6-A238-68CE76A1A149}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F37735B1-251A-4CE6-A238-68CE76A1A149}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F37735B1-251A-4CE6-A238-68CE76A1A149}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AC225C7-9743-4B04-80D4-58BE9150ACD0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AC225C7-9743-4B04-80D4-58BE9150ACD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AC225C7-9743-4B04-80D4-58BE9150ACD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AC225C7-9743-4B04-80D4-58BE9150ACD0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

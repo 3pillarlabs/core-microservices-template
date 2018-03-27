@@ -1,4 +1,4 @@
-Feature: Invoice's automation tests
+Feature: CoreService's automation tests
 
  Scenario: Get the version
     When I GET the version
@@ -27,7 +27,7 @@ Scenario: Submit Add new employee
     #Then the http status should be 200
 	#And the success should equal "true"
 
-Scenario: Submit delete new employee
+Scenario: Submit delete employee
     Given I have an authorized key
     And path parameter id = "101"
     When I send a "DELETE" request on "v1/{id}"

@@ -1,7 +1,12 @@
-Name: Core.Services
-Filters
-	Authorization
-	Exception
-Database connectivity : DatabaseName : CoreServices
-Swagger: 
-Unit Testing with Mock
+This .NetCore Microservice Application contains:
+	• Authorization
+	• Exception handling
+	• Database connectivity
+	• Docker
+	• Logging: 
+		• Docker logging(Kitematic)
+		• NewRelic
+	• Tests:
+		• Automation Tests
+		• Unit Tests with Mock
+	• Swagger
