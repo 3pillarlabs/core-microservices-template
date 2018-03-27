@@ -38,9 +38,9 @@ namespace Core.Services.Repositories.Database
         #endregion
 
         #region Public Methods
-        public Employee GetEmployeeDetailById(int employeeId)
+        public EmployeeDetail GetEmployeeDetailById(int employeeId)
         {
-            Employee employee = null;
+            EmployeeDetail employee = null;
             using (var connection = new SqlConnection(ConnectionString))
             {
                 if (connection.State == ConnectionState.Closed)
@@ -54,7 +54,7 @@ namespace Core.Services.Repositories.Database
                     {
                         while (rdr.Read())
                         {
-                            employee = new Employee();
+                            employee = new EmployeeDetail();
                             employee.EmployeeId = Convert.ToInt32(rdr["EmployeeId"]);
                             employee.Name = Convert.ToString(rdr["Name"]);
                             employee.Address = Convert.ToString(rdr["Address"]);
@@ -84,8 +84,7 @@ namespace Core.Services.Repositories.Database
                         {
                             var employee = new Employee();
                             employee.EmployeeId = Convert.ToInt32(rdr["EMPLOYEEID"]);
-                            employee.Name = Convert.ToString(rdr["NAME"]);
-                            employee.Address = Convert.ToString(rdr["ADDRESS"]);
+                            employee.Name = Convert.ToString(rdr["NAME"]);                           
                             employee.DeptName = Convert.ToString(rdr["DeptName"]);
                             employeeList.Add(employee);
                         }

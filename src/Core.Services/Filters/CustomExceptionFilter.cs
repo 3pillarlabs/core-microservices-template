@@ -48,9 +48,8 @@ namespace Core.Services.Filters
                     _logger.LogError($"@timestamp: {DateTime.Now},@site: {"core-service"}, @level: error, @threadid: {Thread.CurrentThread.ManagedThreadId}, @message: response -{responseBody},  requestUrl: {request.Path},requestMethod: {requestMethod}, responseCode: { response.StatusCode}");
                 }
             }
-
-            var errorResponse = new ResponseMessage() {Message= context.Exception.Message, MessageType = "Error", FriendlyMessage = "Some Error has occured" };
-
+            
+            var errorResponse = Helpers.Helper.ConvertToErrorResponse(context.Exception.Message, ErrorsType.UnhandledError.ToString(), ErrorMessageType.Error.ToString());
             if (!_apiSettings.IsProd)
             {                
                 errorResponse.StackTrace = context.Exception.StackTrace;

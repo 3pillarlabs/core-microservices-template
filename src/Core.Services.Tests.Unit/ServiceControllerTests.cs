@@ -29,8 +29,8 @@ namespace Core.Services.Tests.Unit
             mockDatabaseRepository = new Mock<IDatabaseRepository>();  
             mockDatabaseRepository.Setup(ee=>ee.AddEmployee(Moq.It.IsAny<string>(), Moq.It.IsAny<string>(), Moq.It.IsAny<int>(), Moq.It.IsAny<int>())).Returns(1);
             mockDatabaseRepository.Setup(ee => ee.RemoveEmployee(Moq.It.IsAny<int>())).Returns(1);
-            mockDatabaseRepository.Setup(ee => ee.GetEmployeeDetailById(Moq.It.IsAny<int>())).Returns(new Entities.Employee() { Name="test",Address="gg",Salary=333,DeptName="HR"});
-            mockDatabaseRepository.Setup(ee => ee.GetEmployeesList()).Returns(new List<Employee>() { new Employee() { Name = "test", Address = "gg", Salary = 333, DeptName = "HR" } });
+            mockDatabaseRepository.Setup(ee => ee.GetEmployeeDetailById(Moq.It.IsAny<int>())).Returns(new Entities.EmployeeDetail() { Name="test",Address="gg",Salary=333,DeptName="HR"});
+            mockDatabaseRepository.Setup(ee => ee.GetEmployeesList()).Returns(new List<Employee>() { new Employee() {EmployeeId=101, Name = "test",  DeptName = "HR" } });
         }
         #endregion
 
@@ -40,6 +40,11 @@ namespace Core.Services.Tests.Unit
         {
             var controller = new ServiceController(mockAppSettings.Object, mockDatabaseRepository.Object);
             var request = new AddEmployeeRequest() { };
+            var validationResults = ValidateRequest(request);
+            foreach (var validationResult in validationResults)
+            {
+                controller.ModelState.AddModelError(validationResult.MemberNames.First(), validationResult.ErrorMessage);
+            }
             var response = controller.AddEmployee(request) as ObjectResult;
             var result = response.Value as AddEmployeeResponse;
             Assert.AreEqual(result.Success, false);
@@ -59,7 +64,7 @@ namespace Core.Services.Tests.Unit
             var response = controller.AddEmployee(request) as ObjectResult;
             var result = response.Value as AddEmployeeResponse;
             Assert.AreEqual(result.Success, false);
-            Assert.IsTrue(result.ErrorResponse.Message.Contains("Name"));
+            Assert.IsTrue(result.ErrorResponse.Message.Contains("Address"));
             Assert.AreEqual(response.StatusCode, 400);
         }
         [TestMethod]

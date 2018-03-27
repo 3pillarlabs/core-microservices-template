@@ -17,19 +17,18 @@ Scenario: Get the employees list
     Then the http status should be 200   
     And the result should equal to null
 
+Scenario: Submit delete employee
+    Given I have an authorized key
+    And path parameter id = "105"
+    When I send a "DELETE" request on "v1/{id}"
+    Then the http status should be 200	
+
 Scenario: Submit Add new employee
     Given I have an authorized key
-    And body parameter Name = "AutomationUser"
+    And body parameter Name = "Automation User1"
     And body parameter Address = "Delhi"
     And body parameter DepartmentId = "1002"
     And body parameter Salary = "3500"
-    #When I send a "POST" request on "v1/"
-    #Then the http status should be 200
-	#And the success should equal "true"
-
-Scenario: Submit delete employee
-    Given I have an authorized key
-    And path parameter id = "101"
-    When I send a "DELETE" request on "v1/{id}"
+    When I send a "POST" request on "v1/"
     Then the http status should be 200
-	#And the success should equal "true"
+	And the success should equal "true"

@@ -1,4 +1,5 @@
 ﻿using Core.Services.Areas.V1.Models.Responses;
+using Core.Services.Entities;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 
@@ -14,7 +15,8 @@ namespace Core.Services.Areas.V1.Controlllers
 
             if(id<=0)
             {
-                return BadRequest("Invalid Id..");
+                response.ErrorResponse = Helpers.Helper.ConvertToErrorResponse("Invalid Id..", ErrorsType.ValidationError.ToString(), ErrorMessageType.Validation.ToString());
+                return BadRequest(response);
             }
             if (!ModelState.IsValid)
             {
@@ -28,6 +30,10 @@ namespace Core.Services.Areas.V1.Controlllers
             {
                 response.Result = true;
                 response.Success = true;
+            }
+            else
+            {
+                response.ErrorResponse = Helpers.Helper.ConvertToErrorResponse("Some error occured in adding employee..", ErrorsType.DatabaseError.ToString(), ErrorMessageType.Error.ToString());
             }
             return Ok(response);
                 

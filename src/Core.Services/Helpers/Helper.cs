@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Core.Services.Entities;
+using Microsoft.Extensions.Logging;
 using System;
 using System.IO;
 using System.Text;
@@ -42,6 +43,17 @@ namespace Core.Services.Helpers
                 }               
             }        
             NewRelic.Api.Agent.NewRelic.AddCustomParameter("Response: ", responseMessage);           
+        }
+        public static ResponseMessage ConvertToErrorResponse(string errorMessage, string messageId, string messageType)
+        {
+            ResponseMessage response = new ResponseMessage()
+            {
+                Message = errorMessage,
+                FriendlyMessage = "Some error has occured....",
+                MessageId = messageId,
+                MessageType = messageType
+            };
+            return response;
         }
     }
 }
