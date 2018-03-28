@@ -1,11 +1,11 @@
 This .NetCore Microservice Application contains:
-	• Authorization
+	• Authentication (Basic Key)
 	• Exception handling
 	• Database connectivity
 	• Docker
 	• Logging: 
-		• Docker logging(Kitematic)
-	• Monitoring App:
+		• Docker logging (Kitematic)
+	• Monitoring:
 		• NewRelic
 	• Tests:
 		• Cucumber Automation Tests
