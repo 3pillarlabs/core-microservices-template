@@ -1,3 +1,7 @@
+IF NOT EXISTS (SELECT name FROM master.dbo.sysdatabases WHERE name = N'CoreServices')
+Create Database CoreServices
+GO
+
 use CoreServices
 GO
 
