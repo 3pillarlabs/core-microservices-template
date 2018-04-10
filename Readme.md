@@ -14,13 +14,12 @@ If you want to use your local database then Execute Database script "/sql/Corese
    * Update connection string with your database connections.
 
 ## NewRelic 
-* Case1: If you donot want to use NewRelic then comment below three lines in DockerFile :   ../src/Core.Services/Dockerfile):
+* Case1: If you donot want to use NewRelic then comment below three lines in DockerFile :   ../src/Core.Services/Dockerfile :
  1. ARG NewRelic=./newrelic
  2. COPY $NewRelic ./newrelic 
  3. RUN dpkg -i ./newrelic/newrelic-netcore20-agent*.deb
 
-* Case2: In you want to use NewRelic for integration
- NewRelic download and installation:
+* Case2: In you want to use NewRelic monitoring:
   * Download below from http://download.newrelic.com/dot_net_agent/core_20/current  
 	 1. newrelic-netcore20-agent_8.0.0.0_amd64.deb 
   * Create a folder named "newrelic" inside ../src/Core.Services
