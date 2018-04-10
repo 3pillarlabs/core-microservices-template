@@ -5,10 +5,10 @@
 * Database script
 * Docker
 * Logging: 
-	 Docker logging (Kitematic)
+	 1. Docker logging (Kitematic)
 * Monitoring:
-	 NewRelic
+	 1. NewRelic
 * Tests:
-	 Cucumber Automation Tests
-	 Unit Tests with Mock
+	 1. Cucumber Automation Tests
+	 2. Unit Tests with Mock
 
