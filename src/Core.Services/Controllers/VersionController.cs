@@ -19,7 +19,7 @@ namespace Core.Services.Controllers
                 {
                     new VersionDocument
                     {
-                        Url = "v1/swagger.json" , Status = VersionStatus.Live.ToString()
+                       Status = VersionStatus.Live.ToString()
                     }
                 }
             };

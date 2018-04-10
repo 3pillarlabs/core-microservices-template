@@ -1,7 +1,10 @@
-# Setup IdServer
-# CoreService Integrate
-# Provide UI to select option
-# Visual Studio Template
-# Unit test case coverage - target for 100%
-# Swashbuckle - swagger implementation
+# Upcomin Features:
 
+## Phase 2:
+   * Unit test case coverage - target for 100%
+   * Visual Studio Template
+   * Swagger Documentation
+
+## Phase 3:
+   * Create Idserver Application and Setup
+   * Idserver integration in CustomServiceTemplate

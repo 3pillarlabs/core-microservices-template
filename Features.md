@@ -1,4 +1,4 @@
-# This .NetCore Microservice Application contains:
+# This .NetCore Microservice Application contains below features:
 * Authentication (Basic Key)
 * Exception handling
 * Database connectivity
@@ -6,9 +6,9 @@
 * Docker
 * Logging: 
 	 Docker logging (Kitematic)
-# Monitoring:
+* Monitoring:
 	 NewRelic
-# Tests:
+* Tests:
 	 Cucumber Automation Tests
 	 Unit Tests with Mock
 
