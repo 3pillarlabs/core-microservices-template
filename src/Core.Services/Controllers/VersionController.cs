@@ -1,4 +1,5 @@
 ﻿using Core.Services.Entities;
+using Core.Services.Filters;
 using Microsoft.AspNetCore.Mvc;
 using System.Reflection;
 
@@ -8,6 +9,7 @@ namespace Core.Services.Controllers
     public class VersionController : Controller
     {
         [Route("version")]
+        [ServiceFilter(typeof(CustomExceptionFilter))]
         [HttpGet]
         public IActionResult GetVersion()
         {

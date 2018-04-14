@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace Core.Services.Areas.V1.Controlllers
 {
     [Route("/service/v1")]
+    [ServiceFilter(typeof(CustomExceptionFilter))]
     [ServiceFilter(typeof(CustomAuthorize))]
     public partial class ServiceController : Controller
     {

@@ -31,34 +31,21 @@ namespace Core.Services
             services.AddSingleton<IAppSettings>(appSettings);
             services.AddSingleton<CustomAuthorize>();
             services.AddSingleton<IDatabaseRepository,DatabaseRepository>();
-            var loggerFactory = new LoggerFactory();
-            loggerFactory
-               .WithFilter(new FilterLoggerSettings
-               {
-                    { "Microsoft", Microsoft.Extensions.Logging.LogLevel.None },
-                    { "System", Microsoft.Extensions.Logging.LogLevel.Warning },
-                    { "HyperLogFilter", Microsoft.Extensions.Logging.LogLevel.Trace }
-               })
-               .AddConsole();
-            loggerFactory.AddDebug();
-            services.AddMvc(_ =>
+            services.AddLogging(builder =>
             {
-                _.Filters.Add(new CustomExceptionFilter(appSettings, loggerFactory));
+                builder.AddFilter("Microsoft", LogLevel.None)
+                    .AddFilter("System", LogLevel.Warning)
+                    .AddFilter("HyperLogFilter", LogLevel.Trace)
+                    .AddConsole();
             });
-            }
+            services.AddScoped<CustomExceptionFilter>();
+
+            services.AddMvc();
+        }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            loggerFactory
-               .WithFilter(new FilterLoggerSettings
-               {
-                    { "Microsoft",LogLevel.None },
-                    { "System", LogLevel.Warning },
-                    { "HyperLogFilter", LogLevel.Trace }
-               })
-               .AddConsole();
-            loggerFactory.AddDebug();          
             app.UseMiddleware<LogResponseMiddleware>();
             if (env.IsDevelopment())
             {
