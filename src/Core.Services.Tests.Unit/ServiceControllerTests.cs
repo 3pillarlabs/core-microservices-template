@@ -1,9 +1,7 @@
-using Castle.Core.Logging;
 using Core.Services.Areas.V1.Controlllers;
 using Core.Services.Areas.V1.Models.Requests;
 using Core.Services.Areas.V1.Models.Responses;
 using Core.Services.Configurations;
-using Core.Services.Entities;
 using Core.Services.Repositories.Database;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -30,7 +28,7 @@ namespace Core.Services.Tests.Unit
             mockDatabaseRepository.Setup(ee=>ee.AddEmployee(Moq.It.IsAny<string>(), Moq.It.IsAny<string>(), Moq.It.IsAny<int>(), Moq.It.IsAny<int>())).Returns(1);
             mockDatabaseRepository.Setup(ee => ee.RemoveEmployee(Moq.It.IsAny<int>())).Returns(1);
             mockDatabaseRepository.Setup(ee => ee.GetEmployeeDetailById(Moq.It.IsAny<int>())).Returns(new Entities.EmployeeDetail() { Name="test",Address="gg",Salary=333,DeptName="HR"});
-            mockDatabaseRepository.Setup(ee => ee.GetEmployeesList()).Returns(new List<Employee>() { new Employee() {EmployeeId=101, Name = "test",  DeptName = "HR" } });
+            mockDatabaseRepository.Setup(ee => ee.GetEmployeesList()).Returns(new List<Core.Services.Entities.Employee>() { new Core.Services.Entities.Employee() {EmployeeId=101, Name = "test",  DeptName = "HR" } });
         }
         #endregion
 

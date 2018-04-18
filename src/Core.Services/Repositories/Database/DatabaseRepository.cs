@@ -68,9 +68,9 @@ namespace Core.Services.Repositories.Database
             }
         }
 
-        public List<Employee> GetEmployeesList()
+        public List<Core.Services.Entities.Employee> GetEmployeesList()
         {
-            var employeeList = new List<Employee>();
+            var employeeList = new List<Core.Services.Entities.Employee>();
             using (var connection = new SqlConnection(ConnectionString))
             {
                 if (connection.State == ConnectionState.Closed)
@@ -82,7 +82,7 @@ namespace Core.Services.Repositories.Database
                     {
                         while (rdr.Read())
                         {
-                            var employee = new Employee();
+                            var employee = new Core.Services.Entities.Employee();
                             employee.EmployeeId = Convert.ToInt32(rdr["EMPLOYEEID"]);
                             employee.Name = Convert.ToString(rdr["NAME"]);                           
                             employee.DeptName = Convert.ToString(rdr["DeptName"]);
