@@ -1,6 +1,7 @@
 ﻿using Core.Services.Entities;
 using Core.Services.Filters;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Reflection;
 
 namespace Core.Services.Controllers
@@ -9,7 +10,8 @@ namespace Core.Services.Controllers
     public class VersionController : Controller
     {
         [Route("version")]
-        [ServiceFilter(typeof(CustomExceptionFilter))]
+        [ServiceFilter(typeof(CustomExceptionFilter))]       
+        [SwaggerResponse(200, typeof(VersionModel))]
         [HttpGet]
         public IActionResult GetVersion()
         {

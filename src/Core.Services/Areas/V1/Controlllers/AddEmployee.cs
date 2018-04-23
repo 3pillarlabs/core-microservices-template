@@ -2,6 +2,7 @@
 using Core.Services.Areas.V1.Models.Responses;
 using Core.Services.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Linq;
 
 namespace Core.Services.Areas.V1.Controlllers
@@ -9,6 +10,8 @@ namespace Core.Services.Areas.V1.Controlllers
     public partial class ServiceController : Controller
     {
         [Route("")]
+        [SwaggerResponse(400, typeof(AddEmployeeResponse))]
+        [SwaggerResponse(200, typeof(AddEmployeeResponse))]
         [HttpPost]
         public IActionResult AddEmployee([FromBody]AddEmployeeRequest request)
         {

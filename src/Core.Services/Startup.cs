@@ -8,6 +8,9 @@ using Core.Services.Filters;
 using Core.Services.Configurations;
 using Core.Services.Repositories.Database;
 using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
+using Swashbuckle.AspNetCore.Swagger;
+using System.Linq;
 
 namespace Core.Services
 {
@@ -41,7 +44,14 @@ namespace Core.Services
                     .AddConsole();
             });
             services.AddScoped<CustomExceptionFilter>();
-
+            services.AddSwaggerGen(opt =>
+            {
+                opt.SwaggerDoc("doc", new Info() { Title = "Core Microservice" });
+                opt.AddSecurityDefinition("apikey", new ApiKeyScheme { In = "header", Description = "Please pass apikey", Name = "apikey", Type = "apiKey" });
+                opt.AddSecurityRequirement(new Dictionary<string, IEnumerable<string>> {
+                { "apikey", Enumerable.Empty<string>() }
+                });
+            });
             services.AddMvc();
         }
 
@@ -49,8 +59,13 @@ namespace Core.Services
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory,AppDBSeedData seeder)
         {
             app.UseMiddleware<LogResponseMiddleware>();
+            app.UseSwagger();
             if (env.IsDevelopment())
             {
+                app.UseSwaggerUI(c =>
+                {
+                    c.SwaggerEndpoint("/swagger/doc/swagger.json", "DataService API");
+                });
                 app.UseDeveloperExceptionPage();
             }
 

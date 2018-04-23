@@ -1,6 +1,7 @@
 ﻿using Core.Services.Areas.V1.Models.Responses;
 using Core.Services.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Linq;
 using System.Net;
 
@@ -8,7 +9,9 @@ namespace Core.Services.Areas.V1.Controlllers
 {  
     public partial class ServiceController : Controller
     {
-        [Route("{id:int}")]
+        [Route("{id:int}")]     
+        [SwaggerResponse(400, typeof(GetEmployeeResponse))]
+        [SwaggerResponse(200, typeof(GetEmployeeResponse))]
         [HttpGet]
         public IActionResult GetEmployeeById(int id)
         {

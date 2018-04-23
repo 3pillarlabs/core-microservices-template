@@ -1,13 +1,15 @@
 ﻿using Core.Services.Areas.V1.Models.Responses;
 using Core.Services.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Linq;
 
 namespace Core.Services.Areas.V1.Controlllers
 {  
     public partial class ServiceController : Controller
     {
-        [Route("")]
+        [Route("")]       
+        [SwaggerResponse(200, typeof(GetEmployeesListResponse))]
         [HttpGet]
         public IActionResult GetEmployeeList()
         {

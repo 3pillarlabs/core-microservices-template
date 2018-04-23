@@ -1,6 +1,7 @@
 ﻿using Core.Services.Areas.V1.Models.Responses;
 using Core.Services.Entities;
 using Microsoft.AspNetCore.Mvc;
+using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Linq;
 
 namespace Core.Services.Areas.V1.Controlllers
@@ -8,7 +9,9 @@ namespace Core.Services.Areas.V1.Controlllers
     public partial class ServiceController : Controller
     {
         [Route("{id:int}")]
-        [HttpDelete]
+        [SwaggerResponse(400, typeof(RemoveEmployeeResponse))]
+        [SwaggerResponse(200, typeof(RemoveEmployeeResponse))]
+        [HttpDelete]      
         public IActionResult RemoveEmployee(int id)
         {
             var response =new RemoveEmployeeResponse();
