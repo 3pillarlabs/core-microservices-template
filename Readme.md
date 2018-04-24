@@ -9,9 +9,13 @@
   1. It will provide Kitematic .It's a Docker UI for docker containers and logs.
 
 ## Database
-If you want to use your local database then Execute Database script "/sql/Coreservice.sql" :
-   * It will create coreservices databse with required tables and sps
-   * Update connection string with your database connections.
+If you want to use your local database then Follow below steps: 
+   * Update connection string with your database credentials.
+   * Build Solution 
+   * Run below command in PackageManagerConsole:
+       * update database
+   * It will create coreservices database with required tables with data and sps
+
 
 ## NewRelic 
 * Case1: If you donot want to use NewRelic then comment below three lines in DockerFile :   ../src/Core.Services/Dockerfile :
